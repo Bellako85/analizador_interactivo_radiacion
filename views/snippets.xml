@@ -1,1 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ① PLANTILLA del bloque -->
+    <template id="optica_fisica_snippet" name="Analizador de Longitud de Onda">
+        <section id="fisica" class="scroll-mt-20 py-12 bg-slate-50">
+            <div class="container">
 
+                <div class="text-center mb-10">
+                    <h2 class="h2 fw-bold text-dark mb-3">
+                        Fundamentos Físicos: La Naturaleza de la Radiación HEV
+                    </h2>
+                    <p class="text-muted mx-auto" style="max-width:640px;">
+                        Esta sección interactiva demuestra las ecuaciones de James Clerk Maxwell.
+                        Utilice el deslizador para comprender la relación inversamente proporcional
+                        entre la longitud de onda (nm) y la energía, e identificar la
+                        "frontera del daño" óptica.
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border border-light"
+                     style="max-width:900px; margin:0 auto;">
+
+                    <!-- Slider -->
+                    <div class="mb-5">
+                        <label class="d-block text-center fw-bold text-secondary small mb-3">
+                            Analizador de Longitud de Onda Electromagnética (nm)
+                        </label>
+                        <input type="range" id="wavelength-slider"
+                               class="optica-slider w-100"
+                               min="300" max="750" value="415" step="1"/>
+                        <div class="d-flex justify-content-between mt-2 px-1"
+                             style="font-size:0.7rem; font-weight:700; color:#94a3b8;">
+                            <span>300nm (UV)</span>
+                            <span>400nm</span>
+                            <span>500nm</span>
+                            <span>600nm</span>
+                            <span>750nm (IR)</span>
+                        </div>
+                    </div>
+
+                    <!-- Display dinámico -->
+                    <div id="physics-display"
+                         class="optica-display rounded-4 p-4 p-md-5 text-center">
+                        <div id="nm-display"
+                             class="display-4 fw-bold mb-2 font-monospace">415 nm</div>
+                        <div id="spectrum-label"
+                             class="text-uppercase fw-bold ls-wide mb-4">
+                            Luz Azul-Violeta (HEV)
+                        </div>
+                        <div class="row g-3 text-start mt-2">
+                            <div class="col-md-4">
+                                <div class="bg-white bg-opacity-75 p-3 rounded-3 h-100">
+                                    <div class="fw-bold text-dark mb-1">⚡ Nivel de Energía</div>
+                                    <div id="energy-level" class="text-secondary small">
+                                        Muy Alta (Pico Energético)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-white bg-opacity-75 p-3 rounded-3 h-100">
+                                    <div class="fw-bold text-dark mb-1">👁️ Impacto Fisiológico</div>
+                                    <div id="bio-impact" class="text-secondary small">
+                                        Estrés oxidativo (ROS), daño mitocondrial en fotorreceptores.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-white bg-opacity-75 p-3 rounded-3 h-100">
+                                    <div class="fw-bold text-dark mb-1">🛡️ Recomendación</div>
+                                    <div id="clinical-rec" class="text-secondary small">
+                                        Bloqueo selectivo recomendado (Filtro Azul).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nota -->
+                    <div class="mt-4 p-3 rounded-3 bg-light border small text-muted">
+                        <strong>La Frontera del Daño:</strong> Inmediatamente por debajo del
+                        espectro visible (menor a 380nm) se encuentra la radiación ultravioleta (UV),
+                        de toxicidad comprobada. La luz azul reside en esta frontera energética,
+                        justificando la preocupación clínica por su daño acumulativo.
+                    </div>
+
+                    <!-- Gráfica -->
+                    <div class="mt-5">
+                        <h3 class="text-center fw-bold text-dark mb-3 small text-uppercase">
+                            Curva de Transmitancia — Filtro HEV Selectivo
+                        </h3>
+                        <div style="position:relative; width:100%; height:300px;">
+                            <canvas id="transmittanceChart"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ② REGISTRO en el editor (barra lateral de bloques) -->
+    <template id="snippets_optica" inherit_id="website.snippets"
+              name="Snippets Óptica Clínica">
+        <xpath expr="//div[@id='snippet_groups']" position="before">
+            <div class="o_panel_header">Óptica Clínica</div>
+            <div class="o_panel_body">
+                <t t-snippet="optica_snippet.optica_fisica_snippet"
+                   t-thumbnail="/optica_snippet/static/description/icon.png"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
