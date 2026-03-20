@@ -1,13 +1,4 @@
 /** @odoo-module **/
-/*
- * @odoo-module  <-- le dice al sistema de assets de Odoo 17
- * que este archivo es un módulo JS moderno (ESM).
- * Sin esta línea, Odoo 17 ignora el archivo.
- */
-
-import { onMounted } from "@odoo/owl";
-
-// Esperamos a que el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     initOpticaSlider();
     initTransmittanceChart();
