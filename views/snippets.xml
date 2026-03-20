@@ -100,18 +100,20 @@
         </section>
     </template>
 
-<!-- ② REGISTRO en el editor (barra lateral de bloques) -->
+ <!-- ② REGISTRO en el editor (barra lateral de bloques) -->
     <template id="snippets_optica" inherit_id="website.snippets"
               name="Snippets Óptica Clínica">
-        <xpath expr="//div[@id='snippets_menu']" position="before">
+        <xpath expr="//*[@id='default_snippets']" position="before">
             <t id="optica_snippets">
-            <div id="snippet_optica" class="o_panel">
-                <div class="o_panel_header">Óptica Clínica</div>
-                <div class="o_panel_body">
-                    <t t-snippet="analizador_interactivo_radiacion.optica_fisica_snippet"
-                       t-thumbnail="/analizador_interactivo_radiacion/static/description/icon.png"/>
+                <div id="snippet_optica" class="o_panel">
+                    <div class="o_panel_header">Óptica Clínica</div>
+                    <div class="o_panel_body">
+                        <t t-snippet="analizador_interactivo_radiacion.optica_fisica_snippet"
+                           t-thumbnail="/analizador_interactivo_radiacion/static/description/icon.png">
+                            <keywords>Analizador Radiación HEV Óptica</keywords>
+                        </t>
+                    </div>
                 </div>
-            </div>
+            </t>
         </xpath>
     </template>
-</odoo>
