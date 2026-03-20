@@ -1,5 +1,7 @@
 /** @odoo-module **/
-document.addEventListener('DOMContentLoaded', () => {
+
+
+$(document).ready(function() {
     initOpticaSlider();
     initTransmittanceChart();
 });
