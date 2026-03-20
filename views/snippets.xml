@@ -2,7 +2,9 @@
 <odoo>
     <!-- ① PLANTILLA del bloque -->
     <template id="optica_fisica_snippet" name="Analizador de Longitud de Onda">
-        <section id="fisica" class="scroll-mt-20 py-12 bg-slate-50">
+        <section class="s_optica_fisica scroll-mt-20 py-12"
+         data-name="Analizador Radiación HEV"
+         data-snippet="s_optica_fisica">
             <div class="container">
 
                 <div class="text-center mb-10">
@@ -101,7 +103,8 @@
 <!-- ② REGISTRO en el editor (barra lateral de bloques) -->
     <template id="snippets_optica" inherit_id="website.snippets"
               name="Snippets Óptica Clínica">
-        <xpath expr="//div[@id='snippets_menu']" position="inside">
+        <xpath expr="//div[@id='snippets_menu']" position="before">
+            <t id="optica_snippets">
             <div id="snippet_optica" class="o_panel">
                 <div class="o_panel_header">Óptica Clínica</div>
                 <div class="o_panel_body">
