@@ -9,10 +9,10 @@
     'data': [
         'views/snippets.xml',        
     ],
-    'assets': {
         'web.assets_frontend': [
             'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js',
-            'optica_snippet/static/src/js/optica_slider.js',
+            'analizador_interactivo_radiacion/static/src/js/optica_slider.js',
+            'analizador_interactivo_radiacion/static/src/scss/snippets_neumorficos.scss',
         ],
     },
     'installable': True,
