@@ -3,7 +3,7 @@
     'name': 'Óptica Clínica - Snippet Interactivo',
     'version': '17.0.1.0.0',
     'category': 'Website',
-    'summary': 'Bloque interactivo de longitud de onda para sitio web',
+    'summary': 'Sippets website',
     'author': 'Christian Torres',
     'depends': ['website'],          
     'data': [
