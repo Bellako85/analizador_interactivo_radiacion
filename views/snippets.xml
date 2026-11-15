@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- ① PLANTILLA del bloque -->
+    <!-- ① PLANTILLA 1: Analizador de Longitud de Onda -->
     <template id="optica_fisica_snippet" name="Analizador de Longitud de Onda">
         <section class="s_optica_fisica scroll-mt-20 py-12"
-         data-name="Analizador Radiación HEV"
-         data-snippet="s_optica_fisica">
+                 data-name="Analizador Radiación HEV"
+                 data-snippet="s_optica_fisica">
             <div class="container">
 
                 <div class="text-center mb-10">
@@ -100,7 +100,112 @@
         </section>
     </template>
 
- <!-- ② REGISTRO en el editor (barra lateral de bloques) -->
+    <!-- ② PLANTILLA 2: Tarjetas de Lentes Neumórficas -->
+    <template id="s_oz_lentes_cards" name="Tarjetas de Lentes (Neumórficas)">
+        <section class="s_oz_lentes_cards"
+                 data-name="Tarjetas de Lentes"
+                 data-snippet="s_oz_lentes_cards">
+            <div class="contenedor-cards">
+
+                <!-- Tarjeta 1 -->
+                <article class="card">
+                    <img src="https://res.cloudinary.com/dzw9v9xxl/image/upload/v1783499283/copy_of_generated-eyewear-model_-_2026-02-26t004345538_eqvjgv.webp"
+                         alt="Mujer utilizando lentes monofocales"
+                         class="card-img"
+                         loading="lazy"/>
+                    <h2 class="card-name">Lentes Monofocales</h2>
+                    <p class="card-title">En Xalapa</p>
+                    <p class="card-bio">
+                        Graduación uniforme en todo el lente. Ideal para miopía,
+                        hipermetropía y cualquier tipo de astigmatismo.
+                    </p>
+                    <div class="card-socials">
+                        <a href="https://wa.me/525663838480?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20los%20lentes%20monofocales"
+                           class="social-btn whatsapp"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <span>Ver detalles</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="card">
+                    <img src="https://res.cloudinary.com/dzw9v9xxl/image/upload/v1794518984/copy_of_digital_progressive_ophthalmic_lens_c6cb5df3_wifbrt.jpg"
+                         alt="Mujer utilizando lentes progresivos"
+                         class="card-img"
+                         loading="lazy"/>
+                    <h2 class="card-name">Lentes progresivos</h2>
+                    <p class="card-title">En Xalapa</p>
+                    <p class="card-bio">
+                        Visión clara a diferentes distancias. Ideales para leer,
+                        trabajar y realizar tus actividades diarias.
+                    </p>
+                    <div class="card-socials">
+                        <a href="https://wa.me/525663838480?text=Hola,%20quiero%20agendar%20una%20cita%20para%20lentes%20progresivos"
+                           class="social-btn"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <span>Ver detalles</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="card card-destacada">
+                    <img src="https://res.cloudinary.com/dzw9v9xxl/image/upload/v1775535801/optimized-image_6_l4jivy.webp"
+                         alt="Mujer utilizando lentes para computadora"
+                         class="card-img"
+                         loading="lazy"/>
+                    <h2 class="card-name">Lentes para computadora</h2>
+                    <p class="card-title">En Xalapa</p>
+                    <p class="card-bio">
+                        Graduación personalizada para obtener una visión cómoda
+                        y natural a diferentes distancias.
+                    </p>
+                    <div class="card-socials">
+                        <a href="https://wa.me/525663838480?text=Hola,%20quiero%20apartar%20la%20promoci%C3%B3n%20de%20lentes%20progresivos"
+                           class="social-btn whatsapp"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <span>Ver detalles</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </template>
+
+    <!-- ③ PLANTILLA 3: Bloque Informativo + CTA Cita -->
+    <template id="s_oz_info_cta" name="Bloque Informativo + CTA Cita">
+        <section class="s_oz_info_cta"
+                 data-name="Bloque Informativo + CTA"
+                 data-snippet="s_oz_info_cta">
+            <div class="prog-opcion">
+                <div class="prog3-hero">
+                    <h2>¿Cuál lente progresivo te conviene?</h2>
+                    <p>
+                        No todos los lentes progresivos son iguales. La mejor opción
+                        depende de tu estilo de vida, tu graduación y el uso que les darás.
+                        En Óptica Zamora te ayudamos a elegir el lente ideal según tus
+                        necesidades y tu presupuesto.
+                    </p>
+                </div>
+
+                <div class="lpgx-cta">
+                    <a href="https://wa.me/525663838480?text=Hola,%20quiero%20agendar%20mi%20examen%20de%20la%20vista%20con%20asesor%C3%ADa%20personalizada"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span class="calendar-icon" aria-hidden="true">📅</span>
+                        <span>Agendar examen de la vista con asesoría personalizada</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ④ REGISTRO EN EL PANEL LATERAL "Óptica Clínica" -->
     <template id="snippets_optica" inherit_id="website.snippets"
               name="Snippets Óptica Clínica">
         <xpath expr="//*[@id='default_snippets']" position="before">
@@ -112,9 +217,34 @@
                            t-thumbnail="/analizador_interactivo_radiacion/static/description/icon.png">
                             <keywords>Analizador Radiación HEV Óptica</keywords>
                         </t>
+                        <t t-snippet="analizador_interactivo_radiacion.s_oz_lentes_cards"
+                           t-thumbnail="/website/static/src/img/snippets_thumbs/s_three_columns.svg">
+                            <keywords>Tarjetas Lentes Monofocales Progresivos Neumorfismo</keywords>
+                        </t>
+                        <t t-snippet="analizador_interactivo_radiacion.s_oz_info_cta"
+                           t-thumbnail="/website/static/src/img/snippets_thumbs/s_call_to_action.svg">
+                            <keywords>Bloque Informativo CTA Cita WhatsApp</keywords>
+                        </t>
                     </div>
                 </div>
             </t>
+        </xpath>
+    </template>
+
+    <!-- ⑤ OPCIONES EN EL PANEL DERECHO DEL EDITOR -->
+    <template id="oz_snippets_options" inherit_id="website.snippet_options"
+              name="Opciones Snippets Óptica Zamora">
+        <xpath expr="." position="inside">
+            <div data-selector=".s_oz_lentes_cards">
+                <we-button string="Resaltar 3ª Tarjeta (Borde Azul)"
+                           data-toggle-class="oz-card-elevated"
+                           data-no-preview="true"/>
+            </div>
+            <div data-selector=".s_oz_lentes_cards .card">
+                <we-button string="Marcar como Destacada"
+                           data-toggle-class="card-destacada"
+                           data-no-preview="true"/>
+            </div>
         </xpath>
     </template>
 </odoo>
