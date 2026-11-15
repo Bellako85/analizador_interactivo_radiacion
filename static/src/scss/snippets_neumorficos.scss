@@ -1,0 +1,346 @@
+.s_oz_lentes_cards,
+.s_oz_info_cta {
+    --oz-texto: #172033;
+    --oz-texto-sec: #556176;
+    --oz-azul: #2563eb;
+    --oz-cyan: #0891b2;
+    --oz-bg: #e6ecf5;
+
+    background-color: var(--oz-bg);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 48px 20px;
+}
+
+/* ==========================================
+   SNIPPET: TARJETAS DE LENTES
+   ========================================== */
+.s_oz_lentes_cards {
+    .contenedor-cards {
+        width: min(100%, 1280px);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .card {
+        width: 340px;
+        min-height: 535px;
+        padding: 30px;
+        background-color: var(--oz-bg);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 24px;
+        box-shadow:
+            -10px -10px 25px #ffffff,
+             10px  10px 25px #c5cfde;
+        transition: all 0.5s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 180, 255, 0.5);
+            box-shadow:
+                -12px -12px 24px #ffffff,
+                 12px  12px 24px #bcc7d8,
+                 0 0 20px rgba(0, 180, 255, 0.25);
+        }
+
+        h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a2234;
+        }
+
+        .ubicacion, span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #0077ff;
+        }
+
+        p {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #526077;
+        }
+    }
+
+    .card-img {
+        display: block;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 22px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 6px;
+        background: linear-gradient(145deg, #ffffff, #d5deeb);
+        box-shadow:
+            -8px -8px 16px #ffffff,
+             8px  8px 18px #c1ccde,
+             inset 2px 2px 5px rgba(160, 165, 174, 0.5),
+             inset -2px -2px 5px #ffffff;
+        transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        &:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #F2F2F2, #93979F);
+            box-shadow:
+                -10px -10px 20px #ffffff,
+                 10px  10px 22px #b8c4d8,
+                 0 0 20px rgba(0, 180, 255, 0.35);
+        }
+    }
+
+    .card-name {
+        margin: 20px 0 8px;
+        color: var(--oz-texto);
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    .card-title {
+        margin: 12px 0 8px;
+        color: var(--oz-azul);
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .card-bio {
+        margin: 8px 0 22px;
+        color: var(--oz-texto-sec);
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .card-socials {
+        width: 100%;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 240px;
+        min-height: 50px;
+        padding: 12px 20px;
+        background: #ebebeb;
+        color: #1e293b;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        box-shadow:
+            6px 6px 12px rgba(160, 165, 174, 0.65),
+           -6px -6px 12px #ffffff;
+        transition: all 0.35s ease;
+
+        span {
+            color: inherit;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            color: #2563eb;
+            box-shadow:
+                8px 8px 16px rgba(160, 165, 174, 0.75),
+               -8px -8px 16px #ffffff;
+        }
+    }
+
+    &.oz-card-elevated .card-destacada {
+        border: 1.5px solid rgba(37, 99, 235, 0.45);
+        box-shadow:
+            -12px -12px 28px #ffffff,
+             12px  12px 28px #b8c4d8,
+             0 0 24px rgba(37, 99, 235, 0.16);
+    }
+}
+
+/* ==========================================
+   SNIPPET: HERO INFORMATIVO + CTA FINAL
+   ========================================== */
+.s_oz_info_cta {
+    padding-top: 24px;
+    padding-bottom: 56px;
+
+    .prog-opcion {
+        width: min(100%, 1280px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .prog3-hero {
+        padding: 38px 42px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background-color: var(--oz-bg);
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow:
+            -10px -10px 20px #ffffff,
+             10px  10px 20px #c5cfde;
+        transition: all 0.5s ease;
+
+        &:hover {
+            transform: translateY(-6px);
+            border-color: #dfe2e3;
+            box-shadow:
+                -12px -12px 24px #dfe2e3,
+                 12px  12px 24px #bcc7d8,
+                 0 0 20px rgba(0, 180, 255, 0.25);
+        }
+
+        h2 {
+            margin: 0;
+            padding-left: 14px;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #1a2234;
+            border-left: 5px solid var(--oz-azul);
+        }
+
+        p {
+            margin: 0;
+            padding-left: 18px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: #526077;
+        }
+    }
+
+    .lpgx-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        text-align: center;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 34px;
+            background: linear-gradient(145deg, #f0f5fc, #dce3ee);
+            color: #1d4ed8;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow:
+                -8px -8px 16px #ffffff,
+                 8px  8px 16px #c5cfde;
+            transition: all 0.4s ease;
+
+            &:hover {
+                transform: translateY(-3px) scale(1.02);
+                border-color: #ffffff;
+                box-shadow:
+                    -10px -10px 22px #ffffff,
+                     10px  10px 22px #bcc7d8,
+                     0 12px 30px rgba(0, 180, 255, 0.45);
+            }
+        }
+    }
+
+    .calendar-icon {
+        font-size: 24px;
+        line-height: 1;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 900px) {
+    .s_oz_lentes_cards .contenedor-cards {
+        gap: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .s_oz_lentes_cards .card {
+        width: min(100%, 370px);
+        min-height: 510px;
+        padding: 26px 22px;
+    }
+
+    .s_oz_info_cta {
+        .prog3-hero {
+            padding: 32px 24px;
+        }
+        .lpgx-cta {
+            padding: 0;
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .s_oz_lentes_cards {
+        padding: 24px 12px;
+
+        .card {
+            padding: 22px 18px;
+            border-radius: 22px;
+        }
+        .card-img {
+            width: 160px;
+            height: 160px;
+        }
+        .card-name {
+            font-size: 21px;
+        }
+        .social-btn {
+            min-height: 54px;
+            padding: 8px 12px;
+            font-size: 13px;
+        }
+    }
+
+    .s_oz_info_cta {
+        .prog3-hero h2 {
+            font-size: 1.25rem;
+        }
+        .prog3-hero p {
+            padding-left: 0;
+        }
+        .lpgx-cta a {
+            padding: 14px 18px;
+            font-size: 0.9rem;
+        }
+    }
+}
